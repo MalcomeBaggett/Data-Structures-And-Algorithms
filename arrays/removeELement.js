@@ -5,3 +5,15 @@
 
 // Change the array nums such that the first k elements of nums contain the elements which are not equal to val. The remaining elements of nums are not important as well as the size of nums.
 // Return k.
+
+function solution(list, val) {
+  let left = 0
+
+  for (right = 0; right <= list.length - 1; right++) {
+    if (list[right] != val) {
+      list[left] = list[right]
+      left++
+    }
+  }
+  return left
+}
